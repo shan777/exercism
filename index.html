@@ -2,13 +2,41 @@
 <html>
 <head>
     <script>
-
+/*exercism 1: print hello world
     function helloWorld () {
         document.writeln('hello world');
     }
-    
+    helloWorld();
+*/
 
-helloWorld();
+
+//exercism 2
+// Given a year, report if it is a leap year.
+
+// The tricky thing here is that a leap year in the Gregorian calendar occurs:
+
+// on every year that is evenly divisible by 4
+//   except every year that is evenly divisible by 100
+//     unless the year is also evenly divisible by 400
+// For example, 1997 is not a leap year, but 1996 is. 1900 is not a leap year, but 2000 is.
+
+function findLeapYear(yr) {
+    console.log(yr%4);
+    console.log(yr % 100 !== 0);
+    console.log(yr%400);
+    if(yr % 4 === 0){
+        if((yr % 100 == 0) && (yr % 400 !== 0))
+            document.writeln(yr + ' is not a leap year.');
+        else {
+            document.writeln(yr + ' is a leap year.');
+        }    
+    }else{ 
+        document.writeln(yr + ' is not a leap year.');
+    }    
+}
+
+findLeapYear(2000);
+
 
 </script>
 </head>
